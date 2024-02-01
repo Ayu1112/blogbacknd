@@ -4,6 +4,8 @@ const {connection }=require('./db');
 const { userRouter } = require('./routes/user.route');
 const cors=require('cors')
 
+
+
 require('dotenv').config()
 app.use(express.json());
 app.use(cors())
@@ -16,6 +18,7 @@ app.listen(process.env.port,async()=>{
         console.log('connected to db');
     } catch (error) {
         console.log(error);
+        
         console.log('something is not right');
     }
 })
